@@ -138,7 +138,7 @@ analyzer1.face_counts
 ```
 
 
-# Synopsis 
+  Synopsis 
 
 The module montecarlo contains three methods called Die, Game, and Analyzer. 
 
