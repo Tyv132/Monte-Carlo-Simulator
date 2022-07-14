@@ -79,7 +79,8 @@ The "show" method will show the results of the game.
 # display the result of the game
 game1.show()
 ```
-|   Roll |   0 | 1     |
+|   Die  |   0 | 1     |
+|   Roll |     |       |
 |-------:|----:|:------|
 |      0 |   1 | two   |
 |      1 |   6 | three |
