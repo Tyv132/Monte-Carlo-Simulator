@@ -13,7 +13,9 @@ pip setup.py -e .
 
 ## Usage
 
-The Die class allows for the creation of a "die" object, which contains multiple faces as specified upon instantiation. 
+### Die 
+
+The Die class allows for the creation of a "die" object, which contains multiple faces as specified when instantiated. 
 
 ```python
 from montecarlo import Die 
@@ -26,7 +28,18 @@ my_die = Die(faces)
 faces = ['one', 'two', 'three', 'four', 'five', 'six']
 my_die = Die(faces)
 ```
+By default, the weights for each face on the die are set to 1.0. 
+These weights can be changed using the "change_weight" method. 
 
+```python
+from montecarlo import Die 
+
+# changes the face "6" to have a weight of 5.0. 
+my_die.change_weight(6, 5.0) 
+
+|-|-|
+|test|test|
+```
 
 
 
