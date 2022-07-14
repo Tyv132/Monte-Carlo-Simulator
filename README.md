@@ -61,12 +61,12 @@ die1.show()
 
 ### Game 
 
-The Game class will create a Game object of dice that can be rolled multiple times. \
+The Game class will create a Game object of dice that can be rolled multiple times. 
 ```python
 from montecarlo import Game
 
-# creates a Game object 
-dice = [die1, die2]
+# creates a Game object with two dice of the from die1
+dice = [die1, die1]
 game1 = Game(dice, 10)
 ```
 The "play" method will roll the dice "n" times. 
@@ -74,19 +74,43 @@ The "play" method will roll the dice "n" times.
 # rolls the dice 10 times 
 game1.play(10)
 ```
-The "show" method will show the results of the game. 
+The "show" method will show the results of the game as either a "wide" or "narrow" table. 
 ```python
-# display the result of the game
-game1.show()
+# display the result of the game as a wide table
+game1.show(form = "wide")
 ```
 |   Die  |   0 | 1     |
 |-------:|----:|:------|
 |   Roll |     |       |
-|      0 |   1 | two   |
-|      1 |   6 | three |
-|      2 |   1 | four  |
-|      3 |   3 | four  |
-|      4 |   5 | two   |
+|      0 |   6 | 6     |
+|      1 |   1 | 5     |
+|      2 |   4 | 1     |
+|      3 |   4 | 4     |
+|      4 |   1 | 1     |
+
+### Analyzer
+The Analyzer class will count the total number of times all dice revealed the same face and show all unique combinations of faces. 
+```python
+from montecarlo import Analyzer
+
+# creates an Analyzer object from game1
+analyzer1 = Analyzer(game1)
+```
+The "jackpot" method will show the number of times all dice showed the same face for the same roll number.
+```python
+# prints the number of jackpots.
+analyzer1.jackpots()
+
+# shows a dataframe with the faces and roll number for each jackpot
+analyzer1.jackpots
+```
+|   Die  |   0 |   1 |
+|-------:|----:|----:|
+|   Roll |     |     |
+|      0 |   6 |   6 |
+|      3 |   4 |   4 |
+|      4 |   1 |   1 |
+
 
 
 # Synopsis 
