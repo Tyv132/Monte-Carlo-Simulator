@@ -149,18 +149,18 @@ analyzer1.face_counts
 
 
 ## Manifest 
-- montecarlo package
-  - __init__.py
-  - montecarlo.py
-- .gitignore
-- LICENSE
-- README.md
-- montecarlo_demo.ipynb
-- montecarlo_tests.py
-- montecarlo_tests.txt
-- setup.py 
-
-
+'''
+montecarlo package
+    init.py
+    montecarlo.py
+.gitignore
+LICENSE
+README.md
+montecarlo_demo.ipynb
+montecarlo_tests.py
+montecarlo_tests.txt
+setup.py 
+'''
 
 ## Contributing
 
