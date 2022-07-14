@@ -1,2 +1,2 @@
-from .MonteCarlo import montecarlo
+from .montecarlo import Die, Game, Analyzer
 
