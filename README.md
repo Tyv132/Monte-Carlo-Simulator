@@ -5,11 +5,32 @@ This package was created by Tyler Valentine for the Monte Carlo Simulator projec
 
 ## Installation
 
-Clone the Monte-Carlo-Simulator repository and running the following command to install montecarlo. 
+Clone the Monte-Carlo-Simulator repository and run the following command in the directory to install montecarlo. 
 
 ```bash
 pip setup.py -e . 
 ```
+
+## Usage
+
+The Die class allows for the creation of a "die" object, which contains multiple faces as specified upon instantiation. 
+
+```python
+from montecarlo import Die 
+
+# creates a standard Die object with 6 faces.
+faces = [1,2,3,4,5,6]
+my_die = Die(faces)
+
+# returns 'geese'
+foobar.pluralize('goose')
+
+# returns 'phenomenon'
+foobar.singularize('phenomena')
+```
+
+
+
 
 # Synopsis 
 
