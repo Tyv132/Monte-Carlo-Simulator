@@ -45,6 +45,21 @@ from montecarlo import Die
 # choose 5 random values from the die. 
 my_die.roll(5)
 ```
+The "show" method can show the faces and corresponding probability weights for a die. 
+```python
+from montecarlo import Die 
+
+# display my_die 
+my_die.show()
+```
+|    |   Weight |
+|---:|---------:|
+|  1 |        1 |
+|  2 |        1 |
+|  3 |        1 |
+|  4 |        1 |
+|  5 |        1 |
+|  6 |        1 |
 
 
 
