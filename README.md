@@ -99,7 +99,7 @@ analyzer1 = Analyzer(game1)
 The "jackpot" method will show the number of times all dice showed the same face for the same roll number.
 ```python
 # prints the number of jackpots.
-analyzer1.jackpots()
+analyzer1.jackpot()
 
 # shows a dataframe with the faces and roll number for each jackpot
 analyzer1.jackpots
@@ -110,6 +110,23 @@ analyzer1.jackpots
 |      0 |   6 |   6 |
 |      3 |   4 |   4 |
 |      4 |   1 |   1 |
+
+To show the unique combinations of results and their counts, the combo method can be used. 
+```python
+# finds the distinct combinations of results and their counts.
+analyzer1.combo()
+
+# shows a dataframe with the combinations and the count number for each combo.
+analyzer1.combos
+```
+|        |     |Counts|
+|-------:|----:|----: |
+|      0 |   1 |      |
+|      1 |   1 |   1  |
+|        |   4 |   1  |
+|        |   5 |   1  |
+|      4 |   4 |   1  |
+|      6 |   6 |   1  |
 
 
 
