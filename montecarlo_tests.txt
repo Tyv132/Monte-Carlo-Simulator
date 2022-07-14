@@ -1,0 +1,21 @@
+test_1_change_weight (__main__.MontecarloTestSuite)
+Tests the Die.change_weight() function. ... ok
+test_2_roll (__main__.MontecarloTestSuite)
+Tests the Die.roll() function. ... ok
+test_3_show (__main__.MontecarloTestSuite)
+Tests the Die.show() function. ... ok
+test_4_play (__main__.MontecarloTestSuite)
+Tests the Game.play() function. ... ok
+test_5_show (__main__.MontecarloTestSuite)
+Tests the Game.show() function. ... ok
+test_6_jackpot (__main__.MontecarloTestSuite)
+Tests the Analyzer.jackpot() function. ... ok
+test_7_combo (__main__.MontecarloTestSuite)
+Tests the Analyzer.combo() function. ... ok
+test_8_face_count (__main__.MontecarloTestSuite)
+Tests the Analyzer.face_count() function. ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.051s
+
+OK
