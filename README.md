@@ -71,15 +71,21 @@ game1 = Game(dice, 10)
 ```
 The "play" method will roll the dice "n" times. 
 ```python
-from montecarlo import Die 
-
 # rolls the dice 10 times 
 game1.play(10)
 ```
-
-
-The "show" method can show the faces and corresponding probability weights for a die. 
-
+The "show" method will show the results of the game. 
+```python
+# display the result of the game
+game1.show()
+```
+|   Roll |   0 | 1     |
+|-------:|----:|:------|
+|      0 |   1 | two   |
+|      1 |   6 | three |
+|      2 |   1 | four  |
+|      3 |   3 | four  |
+|      4 |   5 | two   |
 
 
 # Synopsis 
