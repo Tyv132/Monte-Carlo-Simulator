@@ -28,7 +28,7 @@ my_die = Die(faces)
 faces = ['one', 'two', 'three', 'four', 'five', 'six']
 my_die = Die(faces)
 ```
-By default, the weights for each face on the die are set to 1.0. 
+By default, the weights for each face on the die are set to 1.0. \
 These weights can be changed using the "change_weight" method. 
 
 ```python
@@ -36,10 +36,9 @@ from montecarlo import Die
 
 # changes the face "6" to have a weight of 5.0. 
 my_die.change_weight(6, 5.0) 
-
+```
 |-|-|
 |test|test|
-```
 
 
 
