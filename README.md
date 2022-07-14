@@ -37,11 +37,15 @@ from montecarlo import Die
 # changes the face "6" to have a weight of 5.0. 
 my_die.change_weight(6, 5.0) 
 ```
-| weekday   |   temperature |   precipitation |
-|:----------|--------------:|----------------:|
-| monday    |            20 |             100 |
-| thursday  |            30 |             200 |
-| wednesday |            25 |             150 |
+The "roll" method can be used to choose "n" random faces from the faces on the die according to the probability weights for each face.
+
+```python
+from montecarlo import Die 
+
+# choose 5 random values from the die. 
+my_die.roll(5)
+```
+
 
 
 # Synopsis 
