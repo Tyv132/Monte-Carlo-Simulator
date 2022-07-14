@@ -18,15 +18,13 @@ The Die class allows for the creation of a "die" object, which contains multiple
 ```python
 from montecarlo import Die 
 
-# creates a standard Die object with 6 faces.
+# creates a standard Die object with 6 faces with numeric values. 
 faces = [1,2,3,4,5,6]
 my_die = Die(faces)
 
-# returns 'geese'
-foobar.pluralize('goose')
-
-# returns 'phenomenon'
-foobar.singularize('phenomena')
+# the faces can also be strings. 
+faces = ['one', 'two', 'three', 'four', 'five', 'six']
+my_die = Die(faces)
 ```
 
 
