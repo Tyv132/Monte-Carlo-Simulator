@@ -80,8 +80,8 @@ The "show" method will show the results of the game.
 game1.show()
 ```
 |   Die  |   0 | 1     |
-|   Roll |     |       |
 |-------:|----:|:------|
+|   Roll |     |       |
 |      0 |   1 | two   |
 |      1 |   6 | three |
 |      2 |   1 | four  |
