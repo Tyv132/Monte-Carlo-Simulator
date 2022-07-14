@@ -130,16 +130,18 @@ analyzer1.combos
 
 The "face_count" method will display how many times a given face is shown for each roll. 
 ```python
-# finds the distinct combinations of results and their counts.
+# call the face_count function
 analyzer1.face_count()
 
-# shows a dataframe with the combinations and the count number for each combo.
+# display the face counts
 analyzer1.face_counts
 ```
-
-
-  Synopsis 
-
-The module montecarlo contains three methods called Die, Game, and Analyzer. 
+|    |   1 |   2 |   3 |   4 |   5 |   6 |
+|---:|----:|----:|----:|----:|----:|----:|
+|  0 |   0 |   0 |   0 |   0 |   0 |   2 |
+|  1 |   1 |   0 |   0 |   0 |   1 |   0 |
+|  2 |   1 |   0 |   0 |   1 |   0 |   0 |
+|  3 |   0 |   0 |   0 |   2 |   0 |   0 |
+|  4 |   2 |   0 |   0 |   0 |   0 |   0 |
 
 
