@@ -149,7 +149,7 @@ analyzer1.face_counts
 
 
 ## Manifest 
-'''
+```
 montecarlo package
     init.py
     montecarlo.py
@@ -160,7 +160,7 @@ montecarlo_demo.ipynb
 montecarlo_tests.py
 montecarlo_tests.txt
 setup.py 
-'''
+```
 
 ## Contributing
 
