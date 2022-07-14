@@ -5,13 +5,11 @@ This package was created by Tyler Valentine for the Monte Carlo Simulator projec
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Clone the Monte-Carlo-Simulator repository and running the following command to install montecarlo. 
 
 ```bash
-pip install foobar
+pip setup.py -e . 
 ```
-
-
 
 # Synopsis 
 
