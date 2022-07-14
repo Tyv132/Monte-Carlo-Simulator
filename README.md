@@ -21,21 +21,19 @@ The Die class allows for the creation of a "die" object, which contains multiple
 from montecarlo import Die 
 
 # creates a standard Die object with 6 faces with numeric values. 
-faces = [1,2,3,4,5,6]
-my_die = Die(faces)
+faces1 = [1,2,3,4,5,6]
+die1 = Die(faces)
 
 # the faces can also be strings. 
-faces = ['one', 'two', 'three', 'four', 'five', 'six']
-my_die = Die(faces)
+faces2 = ['one', 'two', 'three', 'four', 'five', 'six']
+die2 = Die(faces)
 ```
 By default, the weights for each face on the die are set to 1.0. \
 These weights can be changed using the "change_weight" method. 
 
 ```python
-from montecarlo import Die 
-
 # changes the face "6" to have a weight of 5.0. 
-my_die.change_weight(6, 5.0) 
+die1.change_weight(6, 5.0) 
 ```
 The "roll" method can be used to choose "n" random faces from the faces on the die according to the probability weights for each face.
 
@@ -43,16 +41,16 @@ The "roll" method can be used to choose "n" random faces from the faces on the d
 from montecarlo import Die 
 
 # choose 5 random values from the die. 
-my_die.roll(5)
+die1.roll(5)
 ```
 The "show" method can show the faces and corresponding probability weights for a die. 
 ```python
 from montecarlo import Die 
 
-# display my_die 
-my_die.show()
+# display die_1
+die1.show()
 ```
-|    |   Weight |
+|    |   Weight |    
 |---:|---------:|
 |  1 |      1.0 |
 |  2 |      1.0 |
@@ -60,6 +58,27 @@ my_die.show()
 |  4 |      1.0 |
 |  5 |      1.0 |
 |  6 |      5.0 |
+
+### Game 
+
+The Game class will create a Game object of dice that can be rolled multiple times. \
+```python
+from montecarlo import Game
+
+# creates a Game object 
+dice = [die1, die2]
+game1 = Game(dice, 10)
+```
+The "play" method will roll the dice "n" times. 
+```python
+from montecarlo import Die 
+
+# rolls the dice 10 times 
+game1.play(10)
+```
+
+
+The "show" method can show the faces and corresponding probability weights for a die. 
 
 
 
