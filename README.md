@@ -11,7 +11,7 @@ pip setup.py -e .
 ```
 Montecarlo requires prior installation of the following packages: 
 
-[numpy](https://numpy.org/install/)
+[numpy](https://numpy.org/install/) \
 [pandas](https://pandas.pydata.org/getting_started.html)
 
 
