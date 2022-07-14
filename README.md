@@ -37,9 +37,11 @@ from montecarlo import Die
 # changes the face "6" to have a weight of 5.0. 
 my_die.change_weight(6, 5.0) 
 ```
-|-|-|
-|test|test|
-
+| weekday   |   temperature |   precipitation |
+|:----------|--------------:|----------------:|
+| monday    |            20 |             100 |
+| thursday  |            30 |             200 |
+| wednesday |            25 |             150 |
 
 
 # Synopsis 
