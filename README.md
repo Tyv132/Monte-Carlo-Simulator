@@ -128,6 +128,14 @@ analyzer1.combos
 |      4 |   4 |   1  |
 |      6 |   6 |   1  |
 
+The "face_count" method will display how many times a given face is shown for each roll. 
+```python
+# finds the distinct combinations of results and their counts.
+analyzer1.combo()
+
+# shows a dataframe with the combinations and the count number for each combo.
+analyzer1.combos
+```
 
 
 # Synopsis 
