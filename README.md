@@ -147,7 +147,12 @@ analyzer1.face_counts
 |  3 |   0 |   0 |   0 |   2 |   0 |   0 |
 |  4 |   2 |   0 |   0 |   0 |   0 |   0 |
 
-## API Description 
+## API Description
+Classes:
+- Die
+    - methods
+- Game
+- Analyzer
 
 
 
