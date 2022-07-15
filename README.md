@@ -148,23 +148,42 @@ analyzer1.face_counts
 |  4 |   2 |   0 |   0 |   0 |   0 |   0 |
 
 ## API Description
-Classes
+### Die class 
+```
+Creates a die with n faces and weights, which can be rolled to select a face.
+The default value for each weight is 1.0 and is a float. 
+```
+Methods:
+- init.py 
+```
+Input: 
+faces: ndarray of strings or floats
+```
+- change_weight(face, new_weight)
+```
+Changes the weight of a face on the die to be the value "new_weight".
+Input: 
+face: ndarray or list, which may consist of strings, integers, or floats.
+new_weight: float. 
+```
+-roll(n)
+```
+Choose "n" random faces on the die.
+Input:
+n: integer, default value = 1
+Returns:
+n number of random faces on the die
+```
+-show()
+```
+Show the current die, including the faces and their corresponding weights.
+Returns:
+Die dataframe
+```
+Attributes: 
+None
 
-Die
-```
-Creates a die with N "faces" and W weights, 
-which can be rolled to select a face.
-The default value for each weight is 1.0
-```
-Die.change_weight()
-```
-Required input: 
-A NumPy array of "faces", which may be strings or numbers.
-```
-roll()
-show()
-Game 
-Analyzer
+### Game
 
 
 ## Manifest 
