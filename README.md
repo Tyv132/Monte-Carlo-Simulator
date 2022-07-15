@@ -228,6 +228,7 @@ montecarlo package
     init.py
     montecarlo.py
 .gitignore
+FinalProjectSubmission.ipynb
 LICENSE
 README.md
 montecarlo_demo.ipynb
