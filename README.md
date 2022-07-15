@@ -151,10 +151,12 @@ analyzer1.face_counts
 Classes
 ```
 Die
-- Methods:
-    - change_weight()
-    - roll()
-    - show()
+    Creates a die with N "faces" and W weights, 
+    which can be rolled to select a face.
+    The default value for each weight is 1.0
+change_weight()
+roll()
+show()
 Game 
 Analyzer
 ```
