@@ -149,7 +149,7 @@ analyzer1.face_counts
 
 ## API Description
 Classes
-```
+
 Die
     Creates a die with N "faces" and W weights, 
     which can be rolled to select a face.
@@ -159,7 +159,6 @@ roll()
 show()
 Game 
 Analyzer
-```
 
 
 ## Manifest 
