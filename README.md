@@ -151,10 +151,16 @@ analyzer1.face_counts
 Classes
 
 Die
-    Creates a die with N "faces" and W weights, 
-    which can be rolled to select a face.
-    The default value for each weight is 1.0
-change_weight()
+```
+Creates a die with N "faces" and W weights, 
+which can be rolled to select a face.
+The default value for each weight is 1.0
+```
+Die.change_weight()
+```
+Required input: 
+A NumPy array of "faces", which may be strings or numbers.
+```
 roll()
 show()
 Game 
