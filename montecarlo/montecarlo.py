@@ -4,22 +4,20 @@ import pandas as pd
 
 class Die: 
     '''
-    Creates a die with N "faces" and W weights, 
-    which can be rolled to select a face.
-    The default value for each weight is 1.0   
+    Creates a die with n faces and weights, which can be rolled to select a face.
+    Default value: 1.0 (float)     
     '''
     def __init__(self, faces):
         '''
-        Required input: 
-        A NumPy array of "faces", which may be strings or numbers. 
+        Input: faces (ndarray, str or floats) 
         '''
         weight = {'Weight': [1.0]*len(faces)}                                  # initializes all weights = 1
         self.__die = pd.DataFrame(weight, index = faces)                       # creates a private DataFrame for the die
 
     def change_weight(self, face, new_weight):
         '''
-        Changes the weight of a "face" on the die to be the value "new_weight",
-        which must be a float.
+        Changes the weight of a face on the die to be the value "new_weight".
+        Input: face (ndarray or list -str, int, or float), new_weight (float)
         '''
         if face in self.__die.index:
             try: 
@@ -32,32 +30,34 @@ class Die:
     def roll(self, n = 1):
         '''
         Choose "n" random faces on the die.
-        The default value for "n" is 1. 
+        Input: n (int)
+        Default value: 1 (int)
+        Returns: n number of random faces on the die (list)
         '''      
         # chooses "n" random "faces" from the die according to the weights                                                              
         return random.choices(self.__die.index, k = n, weights = self.__die.Weight)                   
 
     def show(self):
         '''
-        Show the current die, including the faces and their corresponding weights. 
+        Show the current die, including the faces and their corresponding weights.
+        Returns: Die (dataframe)
         '''
         return self.__die
 
 class Game:
     '''
-    Plays a game which consists of rolling one or more dice of the same kind
-    one or more times. 
+    Plays a game which consists of rolling one or more dice one or more times.
     '''
     def __init__(self, dice):
         '''
-        Required input: 
-        A list of already instantiated Die objects with identical "faces". 
+        Input: dice (list of Die objects)
         '''
         self.dice = dice 
 
     def play(self, n):
         '''
-        Chooses a random face on each die "n" times and saves the results. 
+        Chooses a random face on each die "n" times and saves the results.
+        Input: n (integer)
         '''
         results = []
         for n in range(n):
@@ -73,9 +73,10 @@ class Game:
 
     def show(self, form = "wide"):
         '''
-        Shows the outcome of the most recent play as a dataframe
-        in either "wide" or "narrow" form.
-        The default value is "wide". 
+        Shows the outcome of the most recent play as a dataframe in either "wide" or "narrow" form.
+        Input: form ("wide" or "narrow" strings)
+        Default value: "wide" (string)
+        Returns: outcome (dataframe)
         '''
         if form == "wide":
             return self.__outcome                                              # returns the dataframe in wide form 
@@ -91,9 +92,7 @@ class Analyzer:
     '''
     def __init__(self, game):
         '''
-        Required input: 
-        A Die object that has already been played
-        by calling the Die.play(n) function. 
+        Input: dice (list of Die objects)
         '''
         self.__game = game                                                     # defines game object                         
         self.__outcome = game.show()                                           # defines outcome of game 
@@ -101,6 +100,7 @@ class Analyzer:
     def jackpot(self): 
         '''
         Computes how many times the game resulted in all faces being identical.
+        Attribute: analyzer.jackpots (dataframe)
         '''
         self.jackpots = self.__outcome.copy()                                  # creates a copy of the outcome dataframe
         count = 0                                                              # initializes the jackpot count to be zero
@@ -114,8 +114,8 @@ class Analyzer:
 
     def combo(self):
         '''
-        Computes the distinct combinations of faces rolled, 
-        along with their counts. 
+        Computes the distinct combinations of faces rolled, along with their counts.
+        Attribute: analyzer.combos (dataframe) 
         '''
         # sorts the columns and saves the combinations and their counts  
         combos = self.__outcome.copy() 
@@ -123,7 +123,8 @@ class Analyzer:
                                                                       
     def face_count(self):
         '''
-        Computes how many times a given "face" is rolled in each game 
+        Computes how many times a given "face" is rolled in each game
+        Attribute: analyzer.face_counts (dataframe)
         '''
         faces = self.__game.dice[0].show().index.values.tolist()               # defines the list of "faces"
         self.face_counts = pd.DataFrame(columns = faces)                       # creates a dataframe with the "faces" as columns
