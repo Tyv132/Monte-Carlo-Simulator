@@ -151,40 +151,76 @@ analyzer1.face_counts
 ### Die class 
 ```
 Creates a die with n faces and weights, which can be rolled to select a face.
-The default value for each weight is 1.0 and is a float. 
+Default value: 1.0 (float)
 ```
 Methods:
-- init.py 
+- init(faces)
 ```
-Input: 
-faces: ndarray of strings or floats
+Input: faces (ndarray, str or floats)
 ```
 - change_weight(face, new_weight)
 ```
 Changes the weight of a face on the die to be the value "new_weight".
-Input: 
-face: ndarray or list, which may consist of strings, integers, or floats.
-new_weight: float. 
+Input: face (ndarray or list -str, int, or float), new_weight (float)
 ```
--roll(n)
+- roll(n)
 ```
 Choose "n" random faces on the die.
-Input:
-n: integer, default value = 1
-Returns:
-n number of random faces on the die
+Input: n (int)
+Default value: 1 (int)
+Returns: n number of random faces on the die (list)
 ```
--show()
+- show()
 ```
 Show the current die, including the faces and their corresponding weights.
-Returns:
-Die dataframe
+Returns: Die (dataframe)
 ```
-Attributes: 
-None
 
-### Game
-
+### Game Class
+```
+Plays a game which consists of rolling one or more dice one or more times.
+```
+Methods:
+- init(dice)
+```
+Input: dice (list of Die objects)
+```
+- play(n)
+```
+Chooses a random face on each die "n" times and saves the results.
+Input: n (integer)
+```
+- show()
+```
+Shows the outcome of the most recent play as a dataframe in either "wide" or "narrow" form.
+Input: form ("wide" or "narrow" strings)
+Default value: "wide" (string)
+Returns: outcome (dataframe)
+```
+### Analyzer Class
+```
+Takes the results of a game and returns the number of jackpots, the combinations of "faces", and the "face" counts for each roll.
+```
+Methods:
+- init(dice)
+```
+Input: dice (list of Die objects)
+```
+- jackpot()
+```
+Computes how many times the game resulted in all faces being identical.
+Attribute: analyzer.jackpots (dataframe)
+```
+- combo()
+```
+Computes the distinct combinations of faces rolled, along with their counts.
+Attribute: analyzer.combos (dataframe)
+```
+- face_count()
+```
+Computes how many times a given "face" is rolled in each game
+Attribute: analyzer.face_counts (dataframe)
+```
 
 ## Manifest 
 ```
