@@ -148,12 +148,16 @@ analyzer1.face_counts
 |  4 |   2 |   0 |   0 |   0 |   0 |   0 |
 
 ## API Description
-Classes:
-- Die
-    - methods
-- Game
-- Analyzer
-
+Classes
+```
+Die
+- Methods:
+    - change_weight()
+    - roll()
+    - show()
+Game 
+Analyzer
+```
 
 
 ## Manifest 
